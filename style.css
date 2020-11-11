@@ -1,0 +1,98 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('./img/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 100vh;
+    max-width: 200vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    min-height: 100vh;
+    width: 100%;
+
+}
+#drum-logo img{
+    min-height: 50%;
+}
+.head{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    
+}
+.head h1{
+    color: white;
+    position: relative;
+    top: 3vh;
+    
+}
+.head h1::after{
+    content: " .";
+}
+.drums{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20vh;
+}
+.drums div{
+    min-height: 14vh;
+    min-width: 14vh;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    border: 0.2rem black solid;
+    font-family: 'Bree Serif', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+.drums div:hover{
+    transform: scale(1.1);
+}
+#drum h1{
+    margin-top: -0.4em;
+}
+#drum h3{
+    font-size: 95%;
+    color: #f7b731;
+}
+.sounds{
+    display: none;
+}
+.visual-eff{
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    animation-name: myAnimation;
+    animation-duration: 2.5s;
+    animation-direction: alternate;
+    z-index: 100;
+    position: absolute;
+    top: 13vh;
+    right: 75vh;
+    /* background-color: transparent; */
+}
+@keyframes myAnimation{
+    0%{opacity: 0;}
+    100%{opacity: 0.25; transform: translateX(1000%);}
+}
+#copyright{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    opacity: .2;
+    position: absolute;
+    bottom: 1vh;
+    left: 45vw;
+}
